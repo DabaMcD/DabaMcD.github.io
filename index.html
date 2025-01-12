@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    
+    <!-- GrapesJS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.20.1/css/grapes.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.20.1/grapes.min.js"></script>
+    
+    <!-- Basic styles -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #gjs {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="gjs">
+        <!-- Your content will go here -->
+        <header style="background-color: #f8f9fa; padding: 20px;">
+            <nav>
+                <a href="#" style="margin-right: 20px;">Home</a>
+                <a href="#" style="margin-right: 20px;">About</a>
+                <a href="#" style="margin-right: 20px;">Contact</a>
+            </nav>
+        </header>
+        
+        <main style="padding: 20px;">
+            <h1>Welcome to My Website</h1>
+            <p>This is a starter template. Use the GrapesJS editor to customize it!</p>
+        </main>
+    </div>
+
+    <script>
+        const editor = grapesjs.init({
+            container: '#gjs',
+            fromElement: true,
+            height: '100vh',
+            storageManager: false,
+            panels: { defaults: [] },
+            blockManager: {
+                appendTo: '#blocks',
+                blocks: [
+                    {
+                        id: 'section',
+                        label: 'Section',
+                        content: `<section style="padding: 50px;">
+                            <h2>This is a new section</h2>
+                            <p>Add your content here</p>
+                        </section>`,
+                    },
+                    {
+                        id: 'text',
+                        label: 'Text',
+                        content: '<div data-gjs-type="text">Insert your text here</div>',
+                    },
+                ]
+            },
+        });
+    </script>
+</body>
+</html>
